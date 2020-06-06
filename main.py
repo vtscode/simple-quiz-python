@@ -19,15 +19,10 @@ class Player:
 class Bot:
     def __init__(self):
         pass
-    # ok, I am going to eat too
-        # Bro i need take a bath, and eat some food, im hungry
-        # ok
     def makeQuestion(self, Player):
-        response = requests.get("https://opentdb.com/api.php?amount=10&category=18&difficulty=easy") # look this Website, this response json
+        response = requests.get("https://opentdb.com/api.php?amount=10&category=18&difficulty=easy")
         if response.status_code:
             print("New Question!")
-            # so , how to make it file with python and write it?
-            # txt binary
             loaded = response.json()
         elif not response.status_code:
             print("Something went wrong")
