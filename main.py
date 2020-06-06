@@ -1,3 +1,5 @@
+import os
+import time
 import random
 import requests
 import json
@@ -50,4 +52,7 @@ if __name__ in "__main__":
     name = input("Enter your name: ")
     p1 = Player(name)
     bot = Bot()
-    bot.makeQuestion(p1)
+    while True:
+        time.sleep(2)
+        os.system("cls")
+        bot.makeQuestion(p1)
